@@ -25,5 +25,6 @@ The internet is [a massive energy consumer](https://solar.lowtechmagazine.com/20
 **Big pages are worse for the planet**
 
 
+## TLDR;
 
 The web is now powering the world - life can't be avoided without it in many parts of the globe. The way we think about crafting the future of the web **can** make the web a better, more inclusive, and more environmentally friendly place.
