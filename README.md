@@ -1,5 +1,5 @@
 # Small Websites
-A *small website* is one with an uncached network payload consistently under 500kb.
+A *small website* is one with an uncached network payload consistently under 500kb. Read about [why we think small websites are important](https://github.com/bananatron/small-websites/blob/master/why.md).
 
 (🌳) = Using environmentally concious hosting
 
@@ -18,4 +18,5 @@ A *small website* is one with an uncached network payload consistently under 500
 
 
 ### Contribute
-We need help cataloging small sites and services. Create a PR to add to the list or open an issue.
+We need help cataloging small sites and services to reduce bloat on the web.
+Feel free to ceate a PR to add to the list or open an issue for discussion.
