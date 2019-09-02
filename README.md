@@ -23,4 +23,4 @@ A *small website* is one with an uncached network payload consistently **under 5
 
 ### Contribute
 We need help cataloging small sites and services to reduce bloat on the web.
-Feel free to ceate a PR to add to the list or open an issue for discussion.
+Feel free to check out [the rules](https://github.com/bananatron/small-websites/blob/master/rules.md), and create a PR to add to the list or open an issue for discussion.
