@@ -9,6 +9,7 @@ A *small website* is one with an uncached network payload consistently **under 5
 
 ## Blogging/Social Media
 - Neobub (https://neobub.com)
+- Substack (http://substack.com)
 
 ## Publications
 - Low Tech Magazine (https://solar.lowtechmagazine.com) (🌳)
