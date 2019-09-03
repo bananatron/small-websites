@@ -13,18 +13,18 @@ Despite optimizations in browsers and tooling, the web [has become bloated](http
 
 ### Inclusion
 
-Much of the world is not operating with [internet speeds](https://en.wikipedia.org/wiki/List_of_countries_by_Internet_connection_speeds) or rendering devices that the _modern_ web developer is using to produce (or test) web experience. In addition, many javascript-heavy web experiences dismiss the accessibility standards that come free with built-in browser technologies like HTML and CSS.
+Much of the world is not operating with [internet speeds](https://en.wikipedia.org/wiki/List_of_countries_by_Internet_connection_speeds) or rendering devices that the _modern_ web developer is using to produce (or test) the web experiences they produce. In addition, many javascript-heavy web experiences dismiss the accessibility standards that come free with built-in browser technologies like HTML and CSS.
 
 **We're leaving half of the world behind.**
 
 
 ### Environment
 
-The internet is [a massive energy consumer](https://solar.lowtechmagazine.com/2015/10/can-the-internet-run-on-renewable-energy.html). As it becomes faster and more integrated into our societies, it will consume more energy. As responsible stewards of the planet, we should make every effort to use energy responsibly.
+The internet is [a massive energy consumer](https://solar.lowtechmagazine.com/2015/10/can-the-internet-run-on-renewable-energy.html). As it becomes faster and more integrated into our societies, it will consume even more energy. As responsible stewards of the planet, we should make every effort to use energy responsibly.
 
 **Big pages are worse for the planet**
 
 
 ## TLDR;
 
-The web is now powering the world - life can't be avoided without it in many parts of the globe. The way we think about crafting the future of the web **can** make the web a better, more inclusive, and more environmentally friendly place.
+The web is now powering the world - life can't be avoided without it and it's getting bigger. The way we think about crafting the future of the web **can** make the web a better, more inclusive, and more environmentally friendly place.
