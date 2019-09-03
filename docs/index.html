@@ -1,0 +1,193 @@
+<html>
+
+  <head>
+  <style>
+    html, body {
+      padding: 0 1rem;
+      font-size: 16px;
+    }
+
+    section,
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .site {
+      padding-bottom: 2.5rem;
+    }
+    .site.is-hidden {
+      display: none;
+    }
+
+    #site-template {
+      display: none;
+    }
+
+    .category-select {
+      font-size: 0.8rem;
+      margin: 0.25rem;
+      border-radius: 9999px;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 0.4rem 0.8rem;
+    }
+
+    .category-select {
+      cursor: pointer;
+    }
+    .category-select:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+    .category-select.is-active {
+      background-color: black;
+      color: rgba(255, 255, 255, 0.96);
+    }
+
+    .site-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .site-link {
+      font-size: 0.8rem;
+      line-height: 1.1rem;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .site-link:hover {
+      color: black;
+    }
+
+    footer {
+      padding: 0 1rem;
+    }
+
+  </style>
+  </head>
+  <body class="sans-serif">
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+
+    
+    <section>
+    <h1 class="lh-title f1">Small Websites</h1>
+
+    <h2 class="lh-copy f6">A curated list of <i>small websites</i>. <i>Small websites</i> deliver an excellent web experience in a tiny package (<u>under 500kb</u> to be exact).</h2>
+      </section>
+
+
+    <section class="tags mv4">
+      <h4 class="ttu o-40 pl2 f7 mb1">Categories</h4>
+      <ul class="category-selects ma0 list pa0 flex flex-wrap">
+        <li class="category-select is-active" data-category="all">All</li>
+        <li class="category-select" data-category="blogging">Blogging</li>
+        <li class="category-select" data-category="social">Social Media</li>
+        <li class="category-select" data-category="developer_tools">Developer Tools</li>
+        <li class="category-select" data-category="news">News</li>
+        <li class="category-select" data-category="publication">Publications</li>
+        <li class="category-select" data-category="news_readers">News Readers</li>
+      </ul>
+    </section>
+
+
+    <section class="sites">
+
+      <article class="site" id="site-template">
+        <div class="flex flex-wrap items-center">
+          <span class="site-name mr1">Template Name</span>
+          <a class="site-link"></a>
+        </div>
+        <span class="site-description lh-copy o-80 mt2 db">Template description.</span>
+      </article>
+    </section>
+
+
+    <footer class="pv3 f7">
+      <span> &copy; SimpleSites 2019</span> - 
+      <a href="https://github.com/bananatron/small-websites/blob/master/why.md" target="_blank">Why are small websites important?</a> - <a href="https://github.com/bananatron/small-websites/blob/master/rules.md">Add a Site</a>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/4.1.4/cash.min.js"></script>
+    <script>
+      $('.category-select').on('click', function(event) {
+        $('.category-select').removeClass('is-active')
+        var $currentTarget = $(event.currentTarget)
+        let category = event.currentTarget.getAttribute('data-category')
+        filterSites(category)
+        $currentTarget.addClass('is-active')
+      })
+
+      var filterSites = function(category) {
+        if (category == 'all') {
+          $('.site').removeClass('is-hidden')
+        } else {
+          $('.site').addClass('is-hidden')
+          $('.site').each((ii, el) => {
+            var categories_list =  $(el).data('categories')
+            if (!categories_list) return
+            console.log('arr', categories_list)
+            if (categories_list.includes(category)) {
+              $(el).removeClass('is-hidden')
+            }
+          })
+        }
+
+      }
+
+
+
+      website_list = [
+        {
+          name: "Hacker News",
+          url: "https://news.ycombinator.com",
+          description: "Daily links about technology, programming, and science.",
+          categories: ['news'],
+        },
+        {
+          name: "Neobub",
+          url: "https://neobub.com",
+          description: "A simple way to create a microblog and/or newsletter.",
+          categories: ['blogging', 'social'],
+        },
+        {
+          name: "Substack",
+          url: "http://substack.com",
+          description: "A service where you can create a paid newsletter publication.",
+          categories: ['blogging'],
+        },
+        {
+          name: "Low Tech Magazine",
+          url: "https://solar.lowtechmagazine.com",
+          description: "Low tech solutions to modern environmental problems.",
+          categories: ['publication'],
+        },
+        {
+          name: "Github",
+          url: "https://github.com",
+          description: "Git source control and project management.",
+          categories: ['developer_tools'],
+        },
+        {
+          name: "Outline",
+          url: "https://outline.com",
+          description: "Strips styling out of page links and creates a version you can annotate.",
+          categories: ['news_readers'],
+        }
+      ]
+
+
+      $(document).ready (function() {
+        var $siteTemplate = $('#site-template')
+         website_list.forEach(function(siteData) {
+           var $site = $siteTemplate.clone()
+           $site.attr('id', '')
+           $site.data('categories', siteData.categories)
+           $site.find('.site-name').text(siteData.name)
+           $site.find('.site-link').text(siteData.url)
+           $site.find('.site-link').attr('href', siteData.url)
+           $site.find('.site-description').text(siteData.description)
+           $('.sites').append($site)
+         })
+      })
+    </script>
+  </body>
+</html>
