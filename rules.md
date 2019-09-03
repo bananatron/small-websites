@@ -10,3 +10,8 @@ The Facebook landing page (although still quite large) doesn't represent the pay
 The intent of this list is to be a collection of websites/web apps where the primary experience lives on the web. Having a small landing page which promotes a desktop app/game/non-web experience is great, but isn't in the spirit of this list.
 
 3. **Amp/RSS doesn't count**
+
+
+We'd love to have your help! Feel free to make a PR or open an issue to contribute to this project.
+
+❤️
